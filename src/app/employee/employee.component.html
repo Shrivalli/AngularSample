@@ -1,0 +1,29 @@
+<h1 align="center" style="font-style: italic;">Employee Details</h1>
+
+<button (click)="ViewEmployees()">View Employees </button>    <br/><br/> 
+        <table class="table table-bordered" style="background-color: pink;">
+            <tr>
+                <th>Employee Id</th>
+                <th>Employee Name</th>
+                <th>Gender</th>
+                <th>City</th>
+                <th>Department ID</th>
+            </tr>
+            <tr *ngFor="let item of list">
+               <td>{{item.empid}}</td>
+               <td>{{item.name}}</td>
+               <td>{{item.gender}}</td>
+               <td>{{item.newcity}}</td>
+                <td>{{item.deptid}}</td>
+            </tr>
+        </table>
+   <br/><br/>
+   <!--
+Add a New Employee:
+Enter your ID: <input type="number"  required name="eid" #eid/><br/>
+Enter your Name : <input type="text"  required name="ename" #ename/> <br/>
+Enter your Gender: <input type="text"  name="gen" #gen/> <br/>
+Enter your City: <input type="text"  name="city" #city/><br/>
+Enter your Deptid: <input type="number" name="did" #did/><br/>
+<input type="submit" value="Add Employee" (click)="AddEmployee(eid,ename,gen,city,did)"/>
+   -->
